@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">only-friends</string>
+    <string name="app_name">Only Friends</string>
     <string name="default_text">default_text</string>
+
+    <!-- Home page -->
+    <string name="home_page_title">A découvrir</string>
 </resources>
