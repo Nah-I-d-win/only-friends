@@ -4,4 +4,5 @@
 
     <!-- Home page -->
     <string name="home_page_title">A découvrir</string>
+    <string name="home_page_last_gilt_section">Dernières cadeaux</string>
 </resources>
