@@ -13,4 +13,10 @@
     <string name="popup_gift_price_subtitle">\?? ??? €</string>
     <string name="popup_gift_other_title">Autre</string>
     <string name="popup_gift_other_subtitle">Autre infos</string>
+    <string name="add_gift_page_upload_button">CHARGER IMAGE</string>
+    <string name="add_gift_page_upload_new_name">Nom du cadeau</string>
+    <string name="add_gift_page_upload_new_description">Description du cadeau</string>
+    <string name="add_gift_page_upload_new_price">Prix du cadeau</string>
+    <string name="add_gift_page_upload_new_other">Autre information</string>
+    <string name="add_gift_page_save_button">CONFIRMER</string>
 </resources>

@@ -26,7 +26,7 @@ class HomeFragment(
 
         val horizontalRecyclerView = view?.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
         if (horizontalRecyclerView != null) {
-            horizontalRecyclerView.adapter = GiftAdapter(context, GiftRepository.Singleton.giftList, R.layout.item_horizontal_gift)
+            horizontalRecyclerView.adapter = GiftAdapter(context, GiftRepository.Singleton.giftList.filter { !it.liked }, R.layout.item_horizontal_gift)
         }
 
         val verticalRecyclerView = view?.findViewById<RecyclerView>(R.id.vertical_recycler_view)
