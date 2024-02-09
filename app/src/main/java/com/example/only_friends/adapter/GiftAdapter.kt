@@ -9,12 +9,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.only_friends.GiftModel
+import com.example.only_friends.GiftPopup
 import com.example.only_friends.GiftRepository
 import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 
 class GiftAdapter(
-    private val context: MainActivity,
+    val context: MainActivity,
     private val giftList: List<GiftModel>,
     private val layoutId: Int
 ): RecyclerView.Adapter<GiftAdapter.ViewHolder>() {
@@ -54,6 +55,10 @@ class GiftAdapter(
         holder.starIcon.setOnClickListener {
             currentGift.liked = !currentGift.liked
             repo.udpateGift(currentGift)
+        }
+
+        holder.itemView.setOnClickListener {
+            GiftPopup(this, currentGift).show()
         }
 
     }

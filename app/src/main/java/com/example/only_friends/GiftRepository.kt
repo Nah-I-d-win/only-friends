@@ -41,4 +41,8 @@ class GiftRepository {
         Singleton.databaseRef.child(gift.id).setValue(gift)
     }
 
+    fun deleteGift(gift: GiftModel) {
+        Singleton.databaseRef.child(gift.id).removeValue()
+    }
+
 }
