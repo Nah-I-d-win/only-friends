@@ -2,6 +2,7 @@ package com.example.only_friends
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.only_friends.fragments.CollectionFragment
 import com.example.only_friends.fragments.HomeFragment
 
 class MainActivity : AppCompatActivity() {
