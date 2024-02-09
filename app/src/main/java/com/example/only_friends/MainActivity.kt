@@ -9,9 +9,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, HomeFragment(this))
-        transaction.addToBackStack(null)
-        transaction.commit()
+        val repo = GiftRepository()
+        repo.updateData {
+            // What to do once the data is loaded
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, HomeFragment(this))
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
+
     }
 }

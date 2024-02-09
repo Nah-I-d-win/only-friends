@@ -48,6 +48,8 @@ class GiftAdapter(
             holder.starIcon.setImageResource(R.drawable.ic_unstar)
         }
 
+
+
     }
 
 }
