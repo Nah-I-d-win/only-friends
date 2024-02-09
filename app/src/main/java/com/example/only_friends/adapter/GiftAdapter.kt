@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.only_friends.GiftModel
+import com.example.only_friends.GiftRepository
 import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 
@@ -38,6 +39,8 @@ class GiftAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentGift = giftList[position]
 
+        val repo = GiftRepository()
+
         Glide.with(context).load(Uri.parse(currentGift.imageUrl)).into(holder.giftImage)
         holder.giftName?.text = currentGift.name
         holder.giftDescription?.text = currentGift.description
@@ -48,7 +51,10 @@ class GiftAdapter(
             holder.starIcon.setImageResource(R.drawable.ic_unstar)
         }
 
-
+        holder.starIcon.setOnClickListener {
+            currentGift.liked = !currentGift.liked
+            repo.udpateGift(currentGift)
+        }
 
     }
 

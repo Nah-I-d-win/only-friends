@@ -37,4 +37,8 @@ class GiftRepository {
         })
     }
 
+    fun udpateGift(gift: GiftModel) {
+        Singleton.databaseRef.child(gift.id).setValue(gift)
+    }
+
 }
