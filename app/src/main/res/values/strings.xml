@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Only Friends</string>
     <string name="default_text">default_text</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="bottom_home_item">Accueil</string>
+    <string name="bottom_collection_item">Collection</string>
+    <string name="bottom_add_gift_item">Ajouter</string>
 
     <!-- Home page -->
     <string name="home_page_title">A découvrir</string>
@@ -19,4 +24,6 @@
     <string name="add_gift_page_upload_new_price">Prix du cadeau</string>
     <string name="add_gift_page_upload_new_other">Autre information</string>
     <string name="add_gift_page_save_button">CONFIRMER</string>
+    <string name="collection_page_title">Ma collection</string>
+    <string name="add_gift_page_title">Ajout d\'un cadeau</string>
 </resources>
