@@ -7,7 +7,7 @@ import com.example.only_friends.fragments.HomeFragment
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
 
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, HomeFragment())
