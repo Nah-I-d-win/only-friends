@@ -54,6 +54,11 @@ class AddGiftFragment(
     }
 
     private fun sendForm(view: View) {
+
+        if (!areAllFieldsFilled(view)) {
+            return
+        }
+
         val repo = GiftRepository()
         repo.uploadImage(file!!) {
             val giftName = view.findViewById<EditText>(R.id.name_input).text.toString()
@@ -97,5 +102,19 @@ class AddGiftFragment(
             uploadedImage?.setImageURI(file)
         }
     }
+
+    private fun areAllFieldsFilled(view: View): Boolean {
+        val giftName = view.findViewById<EditText>(R.id.name_input).text.toString().trim()
+        val giftDescription = view.findViewById<EditText>(R.id.description_input).text.toString().trim()
+        val giftPrice = view.findViewById<EditText>(R.id.price_input).text.toString().trim()
+        val giftOther = view.findViewById<EditText>(R.id.other_input).text.toString().trim()
+
+        if (file == null || giftName.isEmpty() || giftDescription.isEmpty() || giftPrice.isEmpty() || giftOther.isEmpty()) {
+            Toast.makeText(context, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            return false
+        }
+        return true
+    }
+
 
 }
