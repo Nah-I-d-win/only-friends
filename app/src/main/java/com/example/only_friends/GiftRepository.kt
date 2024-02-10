@@ -18,8 +18,8 @@ import java.util.UUID
 class GiftRepository {
 
     object Singleton {
-        val databaseRef = FirebaseDatabase.getInstance("https://only-friends-f0b88-default-rtdb.europe-west1.firebasedatabase.app").getReference("gift")
-        val storageRef = FirebaseStorage.getInstance().getReferenceFromUrl("gs://only-friends-f0b88.appspot.com")
+        val databaseRef = FirebaseDatabase.getInstance("https://tinnder-of-default-rtdb.europe-west1.firebasedatabase.app").getReference("gift")
+        val storageRef = FirebaseStorage.getInstance().getReferenceFromUrl("gs://tinnder-of.appspot.com/images")
         val giftList = arrayListOf<GiftModel>()
         var downloadUri: Uri? = null
     }
