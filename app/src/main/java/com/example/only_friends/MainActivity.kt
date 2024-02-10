@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun loadHomeFragment() {
+        loadFragment(HomeFragment(this), R.string.home_page_title)
+    }
+
     private fun loadFragment(fragment: Fragment, string: Int) {
         val repo = GiftRepository()
         findViewById<TextView>(R.id.page_title).text = resources.getString(string)
