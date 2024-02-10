@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.only_friends.GiftModel
 import com.example.only_friends.GiftRepository
@@ -73,6 +74,12 @@ class AddGiftFragment(
 
             repo.insertGift(gift)
         }
+
+        val text = "Gift is added !"
+        val duration = Toast.LENGTH_SHORT
+
+        val toast = Toast.makeText(context, text, duration)
+        toast.show()
 
         // Homepage redirection
         (context as? MainActivity)?.loadHomeFragment()
