@@ -4,4 +4,7 @@
 
     <!-- Home page -->
     <string name="home_page_title">A découvrir</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="Register">SignUp</string>
+    <string name="Connection">Login</string>
 </resources>
