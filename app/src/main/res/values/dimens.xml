@@ -4,5 +4,5 @@
     <dimen name="home_text_view">55sp</dimen>
     <dimen name="home_text_view_margin">312sp</dimen>
     <dimen name="_default_layout_margin">32dp</dimen>
-
+    <dimen name="item_margin">10dp</dimen>
 </resources>
