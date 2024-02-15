@@ -1,5 +1,6 @@
 package com.example.only_friends.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -17,4 +18,7 @@ interface UserDao {
 
     @Delete
     fun delete(user: User)
+
+    @Query("SELECT * FROM user WHERE email = :email LIMIT 1")
+    fun getUserByEmail(email: String): LiveData<User>
 }

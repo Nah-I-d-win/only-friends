@@ -24,5 +24,7 @@ class userRepository(private val userDao: UserDao) {
         userDao.insert(user)
     }
 
+    fun getUserByEmail(email: String) = userDao.getUserByEmail(email)
+
     fun getUser(uid: String) = userDao.getUser(uid)
 }

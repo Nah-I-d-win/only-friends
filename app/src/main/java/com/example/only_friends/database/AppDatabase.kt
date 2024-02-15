@@ -7,7 +7,8 @@ import androidx.room.RoomDatabase
 import com.example.only_friends.dao.UserDao
 import com.example.only_friends.model.User
 
-@Database(entities = [User::class], version = 1)
+//si modification de la base de donnees, changer la version(augmenter)
+@Database(entities = [User::class], version = 2)
 abstract class AppDatabase : RoomDatabase() {
 
     //instance pour pouvoir acceder a la base de donnees

@@ -21,6 +21,7 @@ class UserViewModel(private val repository: userRepository) : ViewModel() {
     fun insertUser(user: User) = viewModelScope.launch {
         repository.insertUser(user)
     }
+    fun getUserByEmail(email: String) = repository.getUserByEmail(email)
 
     fun getUser(uid: String) = repository.getUser(uid)
 }
