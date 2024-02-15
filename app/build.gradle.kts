@@ -87,4 +87,7 @@ dependencies {
     //implement  android material design
 
     implementation("com.google.android.material:material:1.4.0")
+
+    //lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
 }
