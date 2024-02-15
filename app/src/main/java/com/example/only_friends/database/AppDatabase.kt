@@ -7,7 +7,6 @@ import androidx.room.RoomDatabase
 import com.example.only_friends.dao.UserDao
 import com.example.only_friends.model.User
 
-// 3. AppDatabase class
 @Database(entities = [User::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
