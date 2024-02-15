@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="gray">#7C7C7C</color>
-    <color name="light_blue">#7EC8E3</color>
-    <color name="blue">#0000FF</color>
-
-
-
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -19,12 +13,5 @@
     <color name="splashColorPrimaryDark">#FF000000</color>
     <color name="splashColorAccent">#e67d20</color>
 
-    <color name="text_view_adaptive_color">@color/black</color>
-
-
-    <color name="my_message_bg">#2196F3</color>
-    <color name="not_my_message_bg">#252424</color>
-
-    <color name="edit_text_bg">#252424</color>
-
+    <color name="text_view_adaptive_color">@color/white</color>
 </resources>
