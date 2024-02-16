@@ -16,16 +16,20 @@ import com.example.only_friends.viewModel.UserViewModel
 import com.example.only_friends.viewModel.UserViewModelFactory
 import com.example.only_friends.repository.userRepository
 import kotlinx.coroutines.launch
+import org.koin.android.ext.android.inject
+import sha256
+
 
 class SignUpActivity : BaseActivity() {
+    private val repository: userRepository by inject()
     private lateinit var viewModel: UserViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        val userDao = AppDatabase.getDatabase(this).userDao()
-        val repository = userRepository(userDao)
+        //val userDao = AppDatabase.getDatabase(this).userDao()
+        //val repository = userRepository(userDao)
         val factory = UserViewModelFactory(repository)
         viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
 
@@ -33,10 +37,11 @@ class SignUpActivity : BaseActivity() {
         signUpButton.setOnClickListener {
             val email = findViewById<EditText>(R.id.email).text.toString()
             val password = findViewById<EditText>(R.id.password).text.toString()
+            val passwordHash = findViewById<EditText>(R.id.password).text.toString().sha256()
             viewModel.signUp(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    val firebaseUser = viewModel.firebaseAuth.currentUser
-                    val user = User(firebaseUser!!.uid, "name", email)
+                    val firebaseUser = repository.getCurrentUser()
+                    val user = User(firebaseUser!!.uid, email, passwordHash)
                     lifecycleScope.launch {
                         viewModel.insertUser(user)
                     }

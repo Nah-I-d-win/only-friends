@@ -17,8 +17,11 @@ import com.example.only_friends.database.AppDatabase
 import com.example.only_friends.repository.userRepository
 import com.example.only_friends.viewModel.UserViewModel
 import com.example.only_friends.viewModel.UserViewModelFactory
+import org.koin.android.ext.android.inject
+import sha256
 
 class LoginActivity : BaseActivity() {
+    private val repository: userRepository by inject()
     private lateinit var viewModel: UserViewModel
 
 
@@ -26,8 +29,8 @@ class LoginActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val userDao = AppDatabase.getDatabase(this).userDao()
-        val repository = userRepository(userDao)
+        //val userDao = AppDatabase.getDatabase(this).userDao()
+        //val repository = userRepository(userDao)
         val factory = UserViewModelFactory(repository)
         viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
 
@@ -50,8 +53,10 @@ class LoginActivity : BaseActivity() {
 
                 }
             } else {
+                val passwordHash = passwordEditText.text.toString().sha256()
+
                 viewModel.getUserByEmail(email).observe(this, { user ->
-                    if (user != null && user.password == password) {
+                    if (user != null && user.password == passwordHash) {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     } else {
