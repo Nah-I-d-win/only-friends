@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Only Friends</string>
     <string name="default_text">default_text</string>
-    
+
     <!-- Bottom Navigation -->
     <string name="bottom_home_item">Accueil</string>
     <string name="bottom_collection_item">Collection</string>
