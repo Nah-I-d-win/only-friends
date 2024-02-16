@@ -10,8 +10,8 @@ import kotlinx.coroutines.withContext
 //Dispatchers.IO: pour les operations d'entree/sortie
 
 
-class userRepository(private val userDao: UserDao) {
-    private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+class userRepository(private val userDao: UserDao, private val firebaseAuth: FirebaseAuth) {
+
 
     fun signUp(email: String, password: String) = firebaseAuth.createUserWithEmailAndPassword(email, password)
 
@@ -27,4 +27,9 @@ class userRepository(private val userDao: UserDao) {
     fun getUserByEmail(email: String) = userDao.getUserByEmail(email)
 
     fun getUser(uid: String) = userDao.getUser(uid)
+
+    fun getCurrentUser() = firebaseAuth.currentUser
+
+
+    fun signOut() = firebaseAuth.signOut()
 }

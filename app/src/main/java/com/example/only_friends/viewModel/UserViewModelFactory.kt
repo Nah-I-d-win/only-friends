@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.example.only_friends.repository.userRepository
+import com.google.firebase.auth.FirebaseAuth
 
 
 /**

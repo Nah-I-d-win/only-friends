@@ -90,4 +90,7 @@ dependencies {
 
     //lifecycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+
+    //koin
+    implementation("io.insert-koin:koin-android:3.1.2")
 }

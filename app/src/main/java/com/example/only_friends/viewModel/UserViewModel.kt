@@ -8,9 +8,10 @@ import kotlinx.coroutines.launch
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import org.koin.core.component.KoinComponent
 
-class UserViewModel(private val repository: userRepository) : ViewModel() {
-    val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+class UserViewModel(private val repository: userRepository  ) : ViewModel() ,
+    KoinComponent {
 
     fun signUp(email: String, password: String) = repository.signUp(email, password)
 
