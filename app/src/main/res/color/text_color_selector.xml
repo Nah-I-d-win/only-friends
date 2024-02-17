@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#220000FF" android:state_pressed="true"/> <!-- couleur quand le texte est pressé -->
+    <item android:color="#220000FF" android:state_hovered="true"/> <!-- couleur quand le texte est survolé -->
+    <item android:color="#0000FF"/> <!-- couleur par défaut -->
+</selector>

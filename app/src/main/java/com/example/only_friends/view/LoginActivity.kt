@@ -31,6 +31,13 @@ class LoginActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+
+        val createAccountTextView = findViewById<TextView>(R.id.create_account)
+        createAccountTextView.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
         val backButton: ImageButton = findViewById(R.id.back_button)
         backButton.setOnClickListener {
             // Naviguer vers la page d'authentification
