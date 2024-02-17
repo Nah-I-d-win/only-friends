@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.only_friends.MainActivity
@@ -27,6 +28,13 @@ class SignUpActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
+        val backButton: ImageButton = findViewById(R.id.back_button)
+        backButton.setOnClickListener {
+            // Naviguer vers la page d'authentification
+            val intent = Intent(this, AuthActivity::class.java)
+            startActivity(intent)
+        }
 
         //val userDao = AppDatabase.getDatabase(this).userDao()
         //val repository = userRepository(userDao)
