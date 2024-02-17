@@ -15,7 +15,7 @@ class SplashActivity : BaseActivity() {
         setContentView(R.layout.activity_splash)
 
         val imageView: ImageView = findViewById(R.id.image)
-        Glide.with(this).load(R.drawable.humain).into(imageView)
+        Glide.with(this).load(R.drawable.loading_2).into(imageView)
 
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, AuthActivity::class.java))
