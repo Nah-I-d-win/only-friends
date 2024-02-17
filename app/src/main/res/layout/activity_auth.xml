@@ -8,11 +8,11 @@
         android:id="@+id/top_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/auth_image"
         android:adjustViewBounds="true"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/auth_image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/welcome_text"
@@ -21,51 +21,60 @@
         android:text="Bienvenue sur Only Fiends !"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/top_image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/top_image" />
 
     <TextView
         android:id="@+id/another_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="106dp"
-        android:layout_marginRight="106dp"
-        android:text="Merci de toujours rester connecté avec nous !"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="90dp"
+        android:text="Merci de toujours rester "
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+
+    <TextView
+        android:id="@+id/another_text_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:text=" connecté avec nous !"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/another_text" />
 
     <Button
         android:id="@+id/sign_up_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_border"
         android:text="Inscription"
         android:textColor="#FFFFFF"
-        android:background="@drawable/button_border"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/another_text"
-        app:layout_constraintVertical_chainStyle="packed"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/another_text_2"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_border"
         android:text="Connexion"
         android:textColor="#FFFFFF"
-        android:background="@drawable/button_border"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_button"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
