@@ -7,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="mid_blue">#1B79BB</color>
+
 
 
     <color name="splashColorPrimary">#ff1b49</color>
@@ -14,4 +16,6 @@
     <color name="splashColorAccent">#e67d20</color>
 
     <color name="text_view_adaptive_color">@color/white</color>
+    <color name="button_background_color">#1B79BB</color>
+
 </resources>

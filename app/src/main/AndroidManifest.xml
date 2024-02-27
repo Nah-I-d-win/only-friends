@@ -20,6 +20,9 @@
             android:name=".view.LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".view.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.SignUpActivity"
             android:exported="false" />
         <activity
