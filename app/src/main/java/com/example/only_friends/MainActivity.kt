@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         val repo = GiftRepository()
         findViewById<TextView>(R.id.page_title).text = resources.getString(string)
         repo.updateData {
-            // What to do once the data is loaded
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container, fragment)
             transaction.addToBackStack(null)
