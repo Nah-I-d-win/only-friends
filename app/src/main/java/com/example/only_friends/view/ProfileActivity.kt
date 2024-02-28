@@ -14,7 +14,6 @@ class ProfileActivity : BaseActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
 
-    // Définissez les références aux TextViews
     private lateinit var nameView: TextView
     private lateinit var lastNameView: TextView
     private lateinit var emailView: TextView
@@ -29,11 +28,10 @@ class ProfileActivity : BaseActivity() {
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
-        // Initialisation des TextViews
         emailView = findViewById(R.id.top_email)
         nameView = findViewById(R.id.ShowNameView)
         lastNameView = findViewById(R.id.showLastnameView)
-        topEmailView = findViewById(R.id.top_email) // Initialisation de topEmailView
+        topEmailView = findViewById(R.id.top_email)
         emailView = findViewById(R.id.showMailView)
         ageView = findViewById(R.id.oldMailView)
         topNameView = findViewById(R.id.top_name)
@@ -50,27 +48,21 @@ class ProfileActivity : BaseActivity() {
     private fun loadUserProfile() {
         val currentUser = auth.currentUser
         currentUser?.let {
-            // Récupération de l'adresse e-mail de l'utilisateur actuel
             val email = it.email
 
-            // Affichage de l'adresse e-mail dans les TextViews top_email et showMailView
             topEmailView.text = email ?: "E-mail non disponible"
-            emailView.text = email ?: "E-mail non disponible" // Assurez-vous que emailView est bien la référence à showMailView
+            emailView.text = email ?: "E-mail non disponible"
 
-            // Récupération et affichage des autres informations depuis Firestore
             val userId = it.uid
             db.collection("users").document(userId).get().addOnSuccessListener { document ->
                 if (document != null) {
                     nameView.text = document.getString("name")
                     topNameView.text = document.getString("name")
                     lastNameView.text = document.getString("lastName")
-                    // L'e-mail est déjà défini ci-dessus, pas besoin de le redéfinir ici pour showMailView
                     ageView.text = document.getLong("age")?.toString() ?: "Non spécifié"
                 } else {
-                    // Gérez le cas où les détails de l'utilisateur ne sont pas trouvés dans Firestore
                 }
             }.addOnFailureListener { exception ->
-                // Gestion des erreurs
             }
         }
     }
