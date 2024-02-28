@@ -6,6 +6,7 @@
     <string name="bottom_home_item">Accueil</string>
     <string name="bottom_collection_item">Collection</string>
     <string name="bottom_add_gift_item">Ajouter</string>
+    <string name="bottom_profil_item">Profil</string>
 
     <!-- Home page -->
     <string name="home_page_title">A découvrir</string>
