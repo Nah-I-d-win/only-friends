@@ -114,7 +114,7 @@
 
                         <TextView
                             android:id="@+id/NameView"
-                            android:layout_width="wrap_content"
+                            android:layout_width="38dp"
                             android:layout_height="45dp"
                             android:layout_marginStart="@dimen/item_padding_profile"
                             android:layout_weight="1"
@@ -150,7 +150,7 @@
 
                         <TextView
                             android:id="@+id/LastnameView"
-                            android:layout_width="57dp"
+                            android:layout_width="41dp"
                             android:layout_height="45dp"
                             android:layout_marginStart="@dimen/item_padding_profile"
                             android:layout_weight="1"
@@ -186,7 +186,7 @@
 
                         <TextView
                             android:id="@+id/MailView"
-                            android:layout_width="wrap_content"
+                            android:layout_width="41dp"
                             android:layout_height="45dp"
                             android:layout_marginStart="@dimen/item_padding_profile"
                             android:layout_weight="1"
@@ -222,7 +222,7 @@
 
                         <TextView
                             android:id="@+id/ageView"
-                            android:layout_width="59dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="45dp"
                             android:layout_marginStart="@dimen/item_padding_profile"
                             android:layout_weight="1"
