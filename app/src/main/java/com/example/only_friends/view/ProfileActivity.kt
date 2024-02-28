@@ -3,7 +3,9 @@ package com.example.only_friends.view
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
+import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.view.BaseActivity
 import com.example.only_friends.view.EditProfileActivity
@@ -25,6 +27,7 @@ class ProfileActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profil)
 
+
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
@@ -41,9 +44,20 @@ class ProfileActivity : BaseActivity() {
             val intent = Intent(this, EditProfileActivity::class.java)
             startActivity(intent)
         }
+        val returnHomeButton = findViewById<ImageButton>(R.id.return_button_home)
+
+        returnHomeButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+
+        }
+
 
         loadUserProfile()
     }
+
+
 
     private fun loadUserProfile() {
         val currentUser = auth.currentUser
@@ -66,6 +80,8 @@ class ProfileActivity : BaseActivity() {
             }
         }
     }
+
+
 
 
 }
