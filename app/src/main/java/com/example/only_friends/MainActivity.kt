@@ -1,5 +1,6 @@
 package com.example.only_friends
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -8,6 +9,7 @@ import androidx.fragment.app.FragmentFactory
 import com.example.only_friends.fragments.AddGiftFragment
 import com.example.only_friends.fragments.CollectionFragment
 import com.example.only_friends.fragments.HomeFragment
+import com.example.only_friends.view.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +31,11 @@ class MainActivity : AppCompatActivity() {
                 }R.id.add_gift_page -> {
                     loadFragment(AddGiftFragment(this), R.string.add_gift_page_title)
                     return@setOnNavigationItemSelectedListener true
-                }
+                } R.id.profile_page -> {
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
+                true
+            }
                 else -> false
             }
         }

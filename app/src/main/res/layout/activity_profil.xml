@@ -48,11 +48,11 @@
                     app:srcCompat="@drawable/profil_page" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/top_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="vithushan arulbalan"
+                    android:text="TextView"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -62,15 +62,15 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/top_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="vithushanarul08@gmail.com"
+                    android:text="TextView"
                     android:textColor="@color/white"
                     android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView"
-                    app:layout_constraintStart_toStartOf="@+id/textView"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    app:layout_constraintEnd_toEndOf="@+id/top_email"
+                    app:layout_constraintStart_toStartOf="@+id/top_email"
+                    app:layout_constraintTop_toBottomOf="@+id/top_email" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3">
+                    app:layout_constraintTop_toBottomOf="@+id/top_name">
 
                     <Button
                         android:id="@+id/button_edit_profile"

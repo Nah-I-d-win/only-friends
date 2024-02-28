@@ -6,7 +6,7 @@
     <string name="bottom_home_item">Accueil</string>
     <string name="bottom_collection_item">Collection</string>
     <string name="bottom_add_gift_item">Ajouter</string>
-    <string name="bottom_profil_item">Profil</string>
+    <string name="bottom_profile_item">Profil</string>
 
     <!-- Home page -->
     <string name="home_page_title">A découvrir</string>
@@ -27,4 +27,5 @@
     <string name="add_gift_page_save_button">CONFIRMER</string>
     <string name="collection_page_title">Ma collection</string>
     <string name="add_gift_page_title">Ajout d\'un cadeau</string>
+    <string name="profile_page_title">Profil</string>
 </resources>
