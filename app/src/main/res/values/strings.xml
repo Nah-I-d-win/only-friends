@@ -36,6 +36,7 @@
     <string name="info_user_lastname">  Prenom : </string>
     <string name="info_user_age">  Age : </string>
     <string name="info_user_email">  Gmail : </string>
+    <string name="info_user_phone">  Téléphone : </string>
     <string name="edit_profile">Modifier Profil</string>
 
 

@@ -16,12 +16,14 @@
             android:layout_height="wrap_content">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="411dp"
+                android:layout_height="731dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,8 +41,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/keyboard_backspace"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -83,18 +85,20 @@
                     app:layout_constraintTop_toBottomOf="@+id/top_email" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_width="364dp"
+                    android:layout_height="387dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="124dp"
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/white_background"
                     android:elevation="3dp"
                     android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/top_name">
+                    app:layout_constraintTop_toBottomOf="@+id/top_name"
+                    app:layout_constraintVertical_bias="0.98">
 
                     <Button
                         android:id="@+id/button_edit_profile"
@@ -207,7 +211,7 @@
                     </LinearLayout>
 
                     <View
-                        android:id="@+id/separatorBottom"
+                        android:id="@+id/separatorSecondMiddle"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginStart="10dp"
@@ -239,6 +243,42 @@
                             android:gravity="center_vertical"
                             android:text="@string/info_user"
                             android:textSize="16sp" />
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separatorBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/profile_view"
+                        tools:layout_marginEnd="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/phoneNumberView"
+                            android:layout_width="40dp"
+                            android:layout_height="44dp"
+                            android:layout_marginStart="@dimen/item_padding_profile"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/info_user_phone"
+                            android:textColor="@color/profile_text"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/ShowPhoneNumberView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/info_user"
+                            android:textSize="16sp" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -248,8 +288,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
