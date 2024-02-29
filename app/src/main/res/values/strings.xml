@@ -6,6 +6,7 @@
     <string name="bottom_home_item">Accueil</string>
     <string name="bottom_collection_item">Collection</string>
     <string name="bottom_add_gift_item">Ajouter</string>
+    <string name="bottom_profile_item">Profil</string>
 
     <!-- Home page -->
     <string name="home_page_title">A découvrir</string>
@@ -26,4 +27,18 @@
     <string name="add_gift_page_save_button">CONFIRMER</string>
     <string name="collection_page_title">Ma collection</string>
     <string name="add_gift_page_title">Ajout d\'un cadeau</string>
+
+
+    <!-- Profile page -->
+    <string name="profile_page_title">Profil</string>
+    <string name="info_user">text view</string>
+    <string name="info_user_name">  Nom : </string>
+    <string name="info_user_lastname">  Prenom : </string>
+    <string name="info_user_age">  Age : </string>
+    <string name="info_user_email">  Gmail : </string>
+    <string name="info_user_phone">  Téléphone : </string>
+    <string name="edit_profile">Modifier Profil</string>
+
+
+
 </resources>

@@ -17,4 +17,9 @@
         android:title="@string/bottom_add_gift_item"
         android:icon="@drawable/ic_plus"/>
 
+    <item
+        android:id="@+id/profile_page"
+        android:title="@string/bottom_profile_item"
+        android:icon="@drawable/ic_profil"/>
+
 </menu>
