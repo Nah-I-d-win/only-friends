@@ -47,8 +47,13 @@ class SignUpActivity : BaseActivity() {
         signUpButton.setOnClickListener {
             val email = findViewById<EditText>(R.id.email).text.toString()
             val password = findViewById<EditText>(R.id.password).text.toString()
+            val name = findViewById<EditText>(R.id.name).text.toString()
+            val lastname = findViewById<EditText>(R.id.lastname).text.toString()
+            val age = findViewById<EditText>(R.id.age).text.toString().toInt()
+            val phonenumber = ""
             val passwordHash = findViewById<EditText>(R.id.password).text.toString().sha256()
             val errorMessageTextView = findViewById<TextView>(R.id.error_message)
+
 
 
             if (email.isEmpty() || password.isEmpty()) {
@@ -58,7 +63,7 @@ class SignUpActivity : BaseActivity() {
             viewModel.signUp(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val firebaseUser = repository.getCurrentUser()
-                    val user = User(firebaseUser!!.uid, email, passwordHash)
+                    val user = User(firebaseUser!!.uid, email, passwordHash, name, age, lastname, phonenumber)
                     lifecycleScope.launch {
                         viewModel.insertUser(user)
                     }
