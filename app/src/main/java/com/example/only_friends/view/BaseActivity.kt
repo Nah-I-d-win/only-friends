@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 open class BaseActivity : AppCompatActivity() {
-    private val PREFS_NAME = "user_prefs"
-    private val DARK_MODE = "dark_mode"
+    val PREFS_NAME = "user_prefs"
+    val DARK_MODE = "dark_mode"
 
 
 
@@ -28,6 +28,7 @@ open class BaseActivity : AppCompatActivity() {
         prefs.edit().putBoolean(DARK_MODE, !isDarkMode).apply()
         recreate()
     }
+
 
 
 
