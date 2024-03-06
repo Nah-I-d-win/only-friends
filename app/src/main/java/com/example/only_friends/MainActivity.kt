@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
+import androidx.recyclerview.widget.RecyclerView
 import com.example.only_friends.fragments.AddGiftFragment
 import com.example.only_friends.fragments.CollectionFragment
 import com.example.only_friends.fragments.HomeFragment

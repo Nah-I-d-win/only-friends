@@ -12,6 +12,7 @@ import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
 import com.example.only_friends.adapter.GiftItemDecoration
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeFragment() : Fragment() {
 
@@ -37,6 +38,18 @@ class HomeFragment() : Fragment() {
             verticalRecyclerView.adapter = GiftAdapter(context, GiftRepository.Singleton.giftList, R.layout.item_vertical_gift)
             verticalRecyclerView.addItemDecoration(GiftItemDecoration())
         }
+
+        val recyclerView = view?.findViewById<RecyclerView>(R.id.vertical_recycler_view)
+        recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val navigationView = activity?.findViewById<BottomNavigationView>(R.id.navigation_view)
+                if (dy > 0 && navigationView?.isShown == true) {
+                    navigationView.visibility = View.GONE
+                } else if (dy < 0) {
+                    navigationView?.visibility = View.VISIBLE
+                }
+            }
+        })
 
         return view
     }
