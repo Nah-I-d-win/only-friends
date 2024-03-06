@@ -8,16 +8,26 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="mid_blue">#1B79BB</color>
-    <item name="colorOnPrimary">#0000</item>
+    <color name="custom_button_background_color">#050D38</color>
 
 
-
-
-    <color name="splashColorPrimary">#ff1b49</color>
-    <color name="splashColorPrimaryDark">#FF000000</color>
-    <color name="splashColorAccent">#e67d20</color>
+    <color name="splashColorPrimary">#800D24</color>
+    <color name="splashColorPrimaryDark">#FFFFFF</color>
+    <color name="splashColorAccent">#733510</color>
 
     <color name="text_view_adaptive_color">@color/white</color>
-    <color name="button_background_color">#1B79BB</color>
+
+    <color name="my_message_bg">#1061B3</color>
+    <color name="not_my_message_bg">#1A1A1A</color>
+
+    <color name="edit_text_bg">#1A1A1A</color>
+
+    <color name="button_background_color">#0E3D56</color>
+
+    <color name="profile_view">#004356</color>
+    <color name="profile_text">#E6B132</color>
+
+    <color name="light_blue">#304C56</color>
+
 
 </resources>

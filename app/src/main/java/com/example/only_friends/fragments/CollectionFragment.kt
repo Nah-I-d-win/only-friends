@@ -13,15 +13,16 @@ import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
 import com.example.only_friends.adapter.GiftItemDecoration
 
-class CollectionFragment(
-    private val context: MainActivity
-): Fragment() {
+class CollectionFragment(): Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater?.inflate(R.layout.fragment_collection, container, false)
+        val context = requireActivity() as MainActivity
+
 
         val collectionRecyclerView = view?.findViewById<RecyclerView>(R.id.collection_recycler_list)
         if (collectionRecyclerView != null) {

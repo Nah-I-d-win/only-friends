@@ -20,9 +20,9 @@ import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import java.util.UUID
 
-class AddGiftFragment(
-    private val context: MainActivity
-): Fragment() {
+class AddGiftFragment(): Fragment() {
+
+
 
     private var uploadedImage: ImageView? = null
     private var file: Uri? = null
@@ -34,6 +34,8 @@ class AddGiftFragment(
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater?.inflate(R.layout.fragment_add_gift, container, false)
+        val context = requireActivity() as MainActivity
+
 
         uploadedImage = view?.findViewById(R.id.preview_image)
 
