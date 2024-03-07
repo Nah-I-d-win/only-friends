@@ -7,13 +7,16 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 internal val coreModules = module {
-    //inject singleton for user repo
+    //ça nous permet de créer une instance de userRepository
+    //on rajoute get() pour récupérer l'instance de FirebaseAuth
     single { userRepository(get() , get()) }
 
-    //inject UserViewModelFactory
+    //ça nous permet de créer une instance
+    // de UserViewModelFactory
     factory { UserViewModelFactory(get() )}
 
-    //inject UserViewModel
+    //ça nous permet de créer une instance de UserViewModelFactory
+    //et de l'injecter dans le viewModel
     viewModel { UserViewModel(get() )}
 
 }

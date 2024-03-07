@@ -8,10 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.only_friends.GiftModel
-import com.example.only_friends.GiftPopup
-import com.example.only_friends.GiftRepository
-import com.example.only_friends.MainActivity
+import com.example.only_friends.model.GiftModel
+import com.example.only_friends.view.GiftPopup
+import com.example.only_friends.repository.GiftRepository
+import com.example.only_friends.view.MainActivity
 import com.example.only_friends.R
 
 class GiftAdapter(

@@ -1,7 +1,7 @@
 package com.example.only_friends.utils
 
 import android.content.Intent
-import com.example.only_friends.MainActivity
+import com.example.only_friends.view.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.fragments.AddGiftFragment
 import com.example.only_friends.fragments.CollectionFragment

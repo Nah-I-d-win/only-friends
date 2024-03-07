@@ -13,9 +13,9 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.only_friends.GiftModel
-import com.example.only_friends.GiftRepository
-import com.example.only_friends.MainActivity
+import com.example.only_friends.model.GiftModel
+import com.example.only_friends.repository.GiftRepository
+import com.example.only_friends.view.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.utils.NavigationUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView

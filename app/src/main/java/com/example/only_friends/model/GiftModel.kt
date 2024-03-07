@@ -1,4 +1,4 @@
-package com.example.only_friends
+package com.example.only_friends.model
 
 class GiftModel(
     val id: String = "gift0",

@@ -1,15 +1,16 @@
-package com.example.only_friends
+package com.example.only_friends.view
 
 import android.app.Dialog
-import android.media.Image
 import android.net.Uri
 import android.os.Bundle
-import android.os.TestLooperManager
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
+import com.example.only_friends.model.GiftModel
+import com.example.only_friends.repository.GiftRepository
 
 class GiftPopup(
     private val adapter: GiftAdapter,

@@ -11,11 +11,8 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.only_friends.MainActivity
 import com.example.only_friends.R
-import com.example.only_friends.database.AppDatabase
 import com.example.only_friends.repository.userRepository
 import com.example.only_friends.viewModel.UserViewModel
 import com.example.only_friends.viewModel.UserViewModelFactory

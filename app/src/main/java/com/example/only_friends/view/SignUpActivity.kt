@@ -1,7 +1,6 @@
 package com.example.only_friends.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,10 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import com.example.only_friends.MainActivity
 import com.example.only_friends.R
-import com.example.only_friends.dao.UserDao
-import com.example.only_friends.database.AppDatabase
 import com.example.only_friends.model.User
 import com.example.only_friends.viewModel.UserViewModel
 import com.example.only_friends.viewModel.UserViewModelFactory

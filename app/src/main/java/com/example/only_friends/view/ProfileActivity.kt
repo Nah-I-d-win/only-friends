@@ -10,10 +10,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
-import com.example.only_friends.MainActivity
 import com.example.only_friends.R
-import com.example.only_friends.view.BaseActivity
-import com.example.only_friends.view.EditProfileActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 

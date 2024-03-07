@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.example.only_friends.GiftRepository
-import com.example.only_friends.MainActivity
+import com.example.only_friends.repository.GiftRepository
+import com.example.only_friends.view.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
 import com.example.only_friends.adapter.GiftItemDecoration

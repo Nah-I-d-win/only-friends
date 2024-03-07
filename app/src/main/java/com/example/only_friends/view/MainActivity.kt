@@ -1,17 +1,12 @@
-package com.example.only_friends
+package com.example.only_friends.view
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentFactory
-import androidx.recyclerview.widget.RecyclerView
-import com.example.only_friends.fragments.AddGiftFragment
-import com.example.only_friends.fragments.CollectionFragment
+import com.example.only_friends.repository.GiftRepository
+import com.example.only_friends.R
 import com.example.only_friends.fragments.HomeFragment
-import com.example.only_friends.view.ProfileActivity
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +30,8 @@ class MainActivity : AppCompatActivity() {
                val transaction = supportFragmentManager.beginTransaction()
                transaction.replace(R.id.fragment_container, fragment)
                transaction.addToBackStack(null)
-               transaction.commit()
+               transaction.commitAllowingStateLoss()//j'ai changer commit par commitAllowingStateLoss
+               //pour permettre à la transaction d'être exécutée même après un onSaveInstanceState()
            }
        }
     }

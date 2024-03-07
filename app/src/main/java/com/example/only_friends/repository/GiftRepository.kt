@@ -1,18 +1,15 @@
-package com.example.only_friends
+package com.example.only_friends.repository
 
 import android.net.Uri
-import android.util.Log
+import com.example.only_friends.model.GiftModel
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
-import java.net.URI
 import java.util.UUID
 
 class GiftRepository {
