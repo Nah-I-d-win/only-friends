@@ -22,6 +22,7 @@ class ProfileActivity : BaseActivity() {
     private lateinit var ageView: TextView
     private lateinit var topEmailView: TextView
     private lateinit var topNameView: TextView
+    private lateinit var phoneNumberView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +39,7 @@ class ProfileActivity : BaseActivity() {
         emailView = findViewById(R.id.showMailView)
         ageView = findViewById(R.id.oldMailView)
         topNameView = findViewById(R.id.top_name)
+        phoneNumberView = findViewById(R.id.ShowPhoneNumberView)
 
         val editProfileButton = findViewById<Button>(R.id.button_edit_profile)
         editProfileButton.setOnClickListener {
@@ -74,6 +76,7 @@ class ProfileActivity : BaseActivity() {
                     topNameView.text = document.getString("name")
                     lastNameView.text = document.getString("lastName")
                     ageView.text = document.getLong("age")?.toString() ?: "Non spécifié"
+                    phoneNumberView.text = document.getString("phoneNumber") ?: "Non spécifié"
                 } else {
                 }
             }.addOnFailureListener { exception ->

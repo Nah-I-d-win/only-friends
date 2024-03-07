@@ -21,4 +21,10 @@ interface UserDao {
 
     @Query("SELECT * FROM user WHERE email = :email LIMIT 1")
     fun getUserByEmail(email: String): LiveData<User>
+
+
+    @Query("UPDATE user SET name = :name, lastname = :lastname, age = :age, phoneNumber = :phoneNumber, email = :email WHERE uid = :uid")
+    fun update(name: String, lastname: String, age: Int, phoneNumber: String, email: String, uid: String)
+
+
 }
