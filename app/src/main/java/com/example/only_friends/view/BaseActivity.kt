@@ -26,7 +26,10 @@ open class BaseActivity : AppCompatActivity() {
         val prefs: SharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         val isDarkMode = prefs.getBoolean(DARK_MODE, false)
         prefs.edit().putBoolean(DARK_MODE, !isDarkMode).apply()
-        recreate()
+
+        AppCompatDelegate.setDefaultNightMode(
+            if (!isDarkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
     }
 
 

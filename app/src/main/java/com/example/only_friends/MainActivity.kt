@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
+import androidx.recyclerview.widget.RecyclerView
 import com.example.only_friends.fragments.AddGiftFragment
 import com.example.only_friends.fragments.CollectionFragment
 import com.example.only_friends.fragments.HomeFragment
@@ -17,19 +18,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadFragment(HomeFragment(this), R.string.home_page_title)
+        loadFragment(HomeFragment(), R.string.home_page_title)
 
         val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
         navigationView.setOnNavigationItemSelectedListener{
             when(it.itemId){
                 R.id.home_page -> {
-                    loadFragment(HomeFragment(this), R.string.home_page_title)
+                    loadFragment(HomeFragment(), R.string.home_page_title)
                     return@setOnNavigationItemSelectedListener true
                 }R.id.collection_page -> {
-                    loadFragment(CollectionFragment(this), R.string.collection_page_title)
+                    loadFragment(CollectionFragment(), R.string.collection_page_title)
                     return@setOnNavigationItemSelectedListener true
                 }R.id.add_gift_page -> {
-                    loadFragment(AddGiftFragment(this), R.string.add_gift_page_title)
+                    loadFragment(AddGiftFragment(), R.string.add_gift_page_title)
                     return@setOnNavigationItemSelectedListener true
                 } R.id.profile_page -> {
                 val intent = Intent(this, ProfileActivity::class.java)
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun loadHomeFragment() {
-        loadFragment(HomeFragment(this), R.string.home_page_title)
+        loadFragment(HomeFragment(), R.string.home_page_title)
     }
 
     private fun loadFragment(fragment: Fragment, string: Int) {

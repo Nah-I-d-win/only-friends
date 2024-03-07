@@ -28,6 +28,11 @@ class ProfileActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profil)
 
+        val darkModeButton: Button = findViewById(R.id.dark_mode_button)
+        darkModeButton.setOnClickListener {
+            toggleDarkMode()
+        }
+
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()

@@ -12,10 +12,11 @@ import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
 import com.example.only_friends.adapter.GiftItemDecoration
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomeFragment(
-    private val context: MainActivity
-) : Fragment() {
+class HomeFragment() : Fragment() {
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,6 +24,9 @@ class HomeFragment(
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater?.inflate(R.layout.fragment_home, container, false)
+
+        val context = requireActivity() as MainActivity
+
 
         val horizontalRecyclerView = view?.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
         if (horizontalRecyclerView != null) {
@@ -34,6 +38,18 @@ class HomeFragment(
             verticalRecyclerView.adapter = GiftAdapter(context, GiftRepository.Singleton.giftList, R.layout.item_vertical_gift)
             verticalRecyclerView.addItemDecoration(GiftItemDecoration())
         }
+
+        val recyclerView = view?.findViewById<RecyclerView>(R.id.vertical_recycler_view)
+        recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val navigationView = activity?.findViewById<BottomNavigationView>(R.id.navigation_view)
+                if (dy > 0 && navigationView?.isShown == true) {
+                    navigationView.visibility = View.GONE
+                } else if (dy < 0) {
+                    navigationView?.visibility = View.VISIBLE
+                }
+            }
+        })
 
         return view
     }
