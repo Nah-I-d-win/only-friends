@@ -8,7 +8,7 @@ import com.example.only_friends.dao.UserDao
 import com.example.only_friends.model.User
 
 //si modification de la base de donnees, changer la version(augmenter)
-@Database(entities = [User::class], version = 2)
+@Database(entities = [User::class], version = 4)
 abstract class AppDatabase : RoomDatabase() {
 
     //instance pour pouvoir acceder a la base de donnees
@@ -29,7 +29,8 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "app_database"
-                ).build()
+                ).fallbackToDestructiveMigration()//permet de supprimer la base de donnees si la version change
+                    .build()
                 INSTANCE = instance
                 return instance
             }
