@@ -34,7 +34,19 @@
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
+
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/light_blue"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/bottom_nav_color"
+        app:itemTextColor="@drawable/bottom_nav_color"
+        app:menu="@menu/bottom_navigation_menu" />
+
 
 
 </RelativeLayout>

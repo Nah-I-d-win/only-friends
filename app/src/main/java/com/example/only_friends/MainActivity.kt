@@ -20,33 +20,14 @@ class MainActivity : AppCompatActivity() {
 
         loadFragment(HomeFragment(), R.string.home_page_title)
 
-        val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
-        navigationView.setOnNavigationItemSelectedListener{
-            when(it.itemId){
-                R.id.home_page -> {
-                    loadFragment(HomeFragment(), R.string.home_page_title)
-                    return@setOnNavigationItemSelectedListener true
-                }R.id.collection_page -> {
-                    loadFragment(CollectionFragment(), R.string.collection_page_title)
-                    return@setOnNavigationItemSelectedListener true
-                }R.id.add_gift_page -> {
-                    loadFragment(AddGiftFragment(), R.string.add_gift_page_title)
-                    return@setOnNavigationItemSelectedListener true
-                } R.id.profile_page -> {
-                val intent = Intent(this, ProfileActivity::class.java)
-                startActivity(intent)
-                true
-            }
-                else -> false
-            }
-        }
+
     }
 
     fun loadHomeFragment() {
         loadFragment(HomeFragment(), R.string.home_page_title)
     }
 
-    private fun loadFragment(fragment: Fragment, string: Int) {
+     fun loadFragment(fragment: Fragment, string: Int) {
        if(!isFinishing && !isDestroyed) {
            val repo = GiftRepository()
            findViewById<TextView>(R.id.page_title).text = resources.getString(string)

@@ -1,5 +1,6 @@
 package com.example.only_friends.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,9 @@ import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
 import com.example.only_friends.adapter.GiftItemDecoration
+import com.example.only_friends.repository.NavigationUtils
+import com.example.only_friends.view.ProfileActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CollectionFragment(): Fragment() {
 
@@ -22,6 +26,9 @@ class CollectionFragment(): Fragment() {
     ): View? {
         val view = inflater?.inflate(R.layout.fragment_collection, container, false)
         val context = requireActivity() as MainActivity
+
+        val navigationView =  view?.findViewById<BottomNavigationView>(R.id.navigation_view)
+        NavigationUtils.setupNavigation(navigationView, requireActivity() as MainActivity, R.id.collection_page)
 
 
         val collectionRecyclerView = view?.findViewById<RecyclerView>(R.id.collection_recycler_list)

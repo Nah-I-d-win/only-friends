@@ -1,5 +1,6 @@
 package com.example.only_friends.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,8 @@ import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
 import com.example.only_friends.adapter.GiftItemDecoration
+import com.example.only_friends.repository.NavigationUtils
+import com.example.only_friends.view.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeFragment() : Fragment() {
@@ -26,6 +29,10 @@ class HomeFragment() : Fragment() {
         val view = inflater?.inflate(R.layout.fragment_home, container, false)
 
         val context = requireActivity() as MainActivity
+
+
+        val navigationView =  view?.findViewById<BottomNavigationView>(R.id.navigation_view)
+        NavigationUtils.setupNavigation(navigationView, requireActivity() as MainActivity, R.id.home_page)
 
 
         val horizontalRecyclerView = view?.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
@@ -53,5 +60,7 @@ class HomeFragment() : Fragment() {
 
         return view
     }
+
+
 
 }

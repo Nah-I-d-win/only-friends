@@ -18,6 +18,9 @@ import com.example.only_friends.GiftModel
 import com.example.only_friends.GiftRepository
 import com.example.only_friends.MainActivity
 import com.example.only_friends.R
+import com.example.only_friends.repository.NavigationUtils
+import com.example.only_friends.view.ProfileActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.UUID
 
 class AddGiftFragment(): Fragment() {
@@ -35,6 +38,11 @@ class AddGiftFragment(): Fragment() {
     ): View? {
         val view = inflater?.inflate(R.layout.fragment_add_gift, container, false)
         val context = requireActivity() as MainActivity
+
+        val navigationView =  view?.findViewById<BottomNavigationView>(R.id.navigation_view)
+        NavigationUtils.setupNavigation(navigationView, requireActivity() as MainActivity, R.id.add_gift_page)
+
+
 
 
         uploadedImage = view?.findViewById(R.id.preview_image)

@@ -27,26 +27,12 @@
         app:layout_constraintTop_toBottomOf="@+id/app_title" />
 
 
-
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp"
         android:layout_marginTop="100dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/light_blue"
-        android:layout_gravity="bottom"
-        app:itemIconTint="@drawable/bottom_nav_color"
-        app:itemTextColor="@drawable/bottom_nav_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_container"
-        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
