@@ -47,13 +47,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadFragment(fragment: Fragment, string: Int) {
-        val repo = GiftRepository()
-        findViewById<TextView>(R.id.page_title).text = resources.getString(string)
-        repo.updateData {
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container, fragment)
-            transaction.addToBackStack(null)
-            transaction.commit()
-        }
+       if(!isFinishing && !isDestroyed) {
+           val repo = GiftRepository()
+           findViewById<TextView>(R.id.page_title).text = resources.getString(string)
+           repo.updateData {
+               val transaction = supportFragmentManager.beginTransaction()
+               transaction.replace(R.id.fragment_container, fragment)
+               transaction.addToBackStack(null)
+               transaction.commit()
+           }
+       }
     }
 }
