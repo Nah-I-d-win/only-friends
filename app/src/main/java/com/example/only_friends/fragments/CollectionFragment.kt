@@ -1,6 +1,5 @@
 package com.example.only_friends.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,8 +12,7 @@ import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
 import com.example.only_friends.adapter.GiftItemDecoration
-import com.example.only_friends.repository.NavigationUtils
-import com.example.only_friends.view.ProfileActivity
+import com.example.only_friends.utils.NavigationUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CollectionFragment(): Fragment() {

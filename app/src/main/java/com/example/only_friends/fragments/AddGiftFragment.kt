@@ -11,15 +11,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.only_friends.GiftModel
 import com.example.only_friends.GiftRepository
 import com.example.only_friends.MainActivity
 import com.example.only_friends.R
-import com.example.only_friends.repository.NavigationUtils
-import com.example.only_friends.view.ProfileActivity
+import com.example.only_friends.utils.NavigationUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.UUID
 

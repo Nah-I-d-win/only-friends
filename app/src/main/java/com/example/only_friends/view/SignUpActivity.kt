@@ -63,7 +63,7 @@ class SignUpActivity : BaseActivity() {
             viewModel.signUp(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val firebaseUser = repository.getCurrentUser()
-                    val user = User(firebaseUser!!.uid, email, passwordHash, name, age, lastname, phonenumber)
+                    val user = User(firebaseUser!!.uid, email, name, lastname, age, phonenumber,passwordHash)
                     lifecycleScope.launch {
                         viewModel.insertUser(user)
                     }

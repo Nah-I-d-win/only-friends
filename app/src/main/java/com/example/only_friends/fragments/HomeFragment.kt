@@ -1,20 +1,17 @@
 package com.example.only_friends.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.example.only_friends.GiftModel
 import com.example.only_friends.GiftRepository
 import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.adapter.GiftAdapter
 import com.example.only_friends.adapter.GiftItemDecoration
-import com.example.only_friends.repository.NavigationUtils
-import com.example.only_friends.view.ProfileActivity
+import com.example.only_friends.utils.NavigationUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeFragment() : Fragment() {

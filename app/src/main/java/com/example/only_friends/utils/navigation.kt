@@ -1,7 +1,6 @@
-package com.example.only_friends.repository
+package com.example.only_friends.utils
 
 import android.content.Intent
-import androidx.fragment.app.Fragment
 import com.example.only_friends.MainActivity
 import com.example.only_friends.R
 import com.example.only_friends.fragments.AddGiftFragment
